@@ -1,0 +1,25 @@
+channel = "42"
+
+#[msg]
+#ordered = false
+
+[auth]
+name = "frank"
+pass = "secret"
+pass-file = "passfile"
+token = "token"
+token-file = "tokenfile"
+
+[sender]
+mgmtif = "192.168.0.100:2000"
+msgif = "192.168.0.100:2100"
+#msgif = "/tmp/foo.sock"
+
+[receiver]
+mgmtif = "192.168.1.100:4000"
+subif = "192.168.1.100:4100"
+sub-retries = 200
+sub-retry-delay = "1 minute"
+push-listenif = "10.0.0.1:8080"
+
+# vim: set ft=toml et sw=2 ts=2 sts=2 cinoptions=2 tw=79 :
